@@ -1,0 +1,33 @@
+body {
+    text-align: right;
+    padding: 100px;
+    background-image: url("piggy\ bank.jpg");
+    background-repeat: no-repeat;
+    
+  }
+  h1
+  {
+    font-size: 40px;
+  }
+  p
+  {
+    font-size: 20px;
+  }
+  
+  .done {
+    text-decoration: line-through;
+    color: grey;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 10px 0;
+    margin: 0;
+  }
+  
+  li {
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.2em;
+  }
+  

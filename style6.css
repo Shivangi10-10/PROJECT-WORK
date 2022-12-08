@@ -1,0 +1,160 @@
+body {
+	background-color: whitesmoke  !important;
+  
+}
+.button{
+	border-radius: 20px;
+	padding:10px;
+	width:80px;
+	height:45px;
+	background-color: rgb(15, 63, 151);
+	color:white;
+	cursor: pointer;
+}
+.button:hover{
+	background:rgb(83, 118, 178);
+	color:rgb(255, 255, 255);
+	
+}
+.popup{
+	/* background-color :black; */
+	
+	width: 90%;
+	height : 40%;
+	position: absolute;
+	top:0;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	text-align: center;
+}
+.hidden{
+	display: none;
+}
+input{
+	margin: auto;
+	display: block;
+	width:96%;
+	padding:8%;
+	border: 1px solid grey;
+	text-align: center;
+	
+}
+.close{
+	position:absolute;
+	top: -15px;
+	right: -15px;
+	background: white;
+	height:20px;
+	width: 20px;
+	border-radius:50px;
+	box-shadow: 6px 6px 29px -4px black;
+	cursor: pointer;
+}
+.popup-content{
+	height:250px;
+	width: 500px;
+	background-color:rgb(73, 115, 189);
+
+	/* background: linear-gradient(rgb(84, 224, 173) ,rgb(3, 162, 173),black) */
+	
+	padding:20px;
+	border-radius:5px;
+	position:relative;
+}
+
+.wallet-container {
+	background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjOvSperRYjHH9-EHlKZJBfwvXy4rJpyerzHQsnp8DuuycYU5_);
+		width: 320px;
+		color: #fff;
+		font-size: 15px;
+		padding: 20px 20px 0;
+		top: 55%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		position: absolute;
+  
+  
+}
+,button{
+	
+}
+
+.page-title {
+	text-align: left;
+}
+
+.fa-user {
+	float: right;
+}
+
+.fa-align-left {
+	margin-right: 15px;
+}
+
+.amount-box img {
+	width: 50px;
+}
+
+.amount {
+	font-size: 35px;
+}
+
+.amount-box p {
+	margin-top: 10px;
+	margin-bottom: -10px;
+}
+
+.btn-group {
+	margin: 20px 0;
+}
+
+.btn-group .btn {
+	margin: 8px;
+	border-radius: 20px !important;
+	font-size: 12px;
+}
+
+.txn-history {
+	text-align: left;
+}
+
+.txn-list {
+	background-color: #fff;
+	padding: 12px 10px; 
+	color: #777;
+	font-size: 14px;
+	margin: 7px 0;
+}
+
+.debit-amount {
+	color: red;
+	float: right;
+}
+
+.credit-amount {
+	color: green;
+	float: right;
+
+}
+
+.footer-menu {
+	margin: 20px -20px 0;
+	bottom: 0;
+	border-top: 1px solid #ccc;
+	padding: 10px 10px 0;
+}
+
+.footer-menu p {
+	font-size: 12px;
+}
+
+
+
+@media screen and (max-width: 800px){
+  .wallet-container {
+    height: 115%;
+    bottom: 20px;
+    margin-top: 100px;
+  }
+  

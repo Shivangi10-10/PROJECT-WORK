@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>E-wallet</title>
+	<link rel="stylesheet" href="style6.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+</head>
+<body>
+	<div class="wallet-container text-center">
+		<p class="page-title"><i class="fa fa-align-left"></i>My E-wallet<i class="fa fa-user"></i></p>
+
+		<div class="amount-box text-center">
+			<img src="https://lh3.googleusercontent.com/ohLHGNvMvQjOcmRpL4rjS3YQlcpO0D_80jJpJ-QA7-fQln9p3n7BAnqu3mxQ6kI4Sw" alt="wallet">
+			<p>Total Balance</p>
+			<p class="amount">$ <span id="price">123</span></p>
+		</div>
+
+		<div class="btn-group text-center">
+			<button class="btn btn-outline-light" id="add-btn" >Add Money</button>
+			<button type="button" class="btn btn-outline-light" id="sub-btn" name="wd">Widthdraw</button>
+			</div>
+			<div id="show" class="popup hidden" >
+				<div class="popup-content">
+					<image id="clos" src="close.png" alt="close" class="close"></image>
+					<input type="text" id="newAmt" placeholder="Enter Amount " ><br><br>
+					<button id="add-2" type="button" class="button"> Add </button>
+				</div>
+			</div>
+			<div id="showwith" class="popup2 hidden" >
+				<div class="popup-content">
+					<image id="clos" src="close.png" alt="close" class="close"></image>
+					<input type="text" id="newAmt2" placeholder="Enter Amount " ><br><br>
+					<button id="with-2" type="button" class="button"> Withdraw </button>
+				</div>
+			</div>
+
+
+			<div class="txn-history">
+				<p><b>History</b></p>
+				<p class="txn-list">Payment to xyz shop<span class="debit-amount">-$100</span></p>
+
+				<p class="txn-list">Payment to abc shop<span class="debit-amount">-$150</span></p>
+
+				<p class="txn-list">Credit From abc ltd<span class="credit-amount">+$300</span></p>
+
+				<p class="txn-list">Transfer From John Doe<span class="credit-amount">+$100</span></p>
+			</div>
+				</div>
+			</div>
+</div>
+</body>
+<script>
+    const show=document.getElementById("show");
+    const addBtn = document.getElementById("add-btn");
+    const subBtn = document.getElementById("sub-btn");
+    const show2 = document.getElementById("showwith")
+    function add(){
+        let mon = document.getElementById("price").innerHTML;
+        console.log(mon)
+        let initialValue = parseInt(mon);
+        console.log(initialValue)
+        let newAmt = parseInt(document.getElementById("newAmt").value);
+        console.log(newAmt)
+        mon = initialValue + newAmt;
+        console.log(mon);
+        document.getElementById("price").innerHTML=mon;
+    }
+    function subtract(){
+        let mon = document.getElementById("price").innerHTML;
+        console.log(mon)
+        let initialValue = parseInt(mon);
+        console.log(initialValue)
+        let newAmt = parseInt(document.getElementById("newAmt2").value);
+        console.log(newAmt)
+        mon = initialValue - newAmt;
+        console.log(mon);
+        document.getElementById("price").innerHTML=mon;
+    }
+    subBtn.addEventListener("click",function(){
+        show2.classList.remove("hidden");
+        document.getElementById("with-2").addEventListener("click",()=>{
+            subtract()
+            show2.classList.add("hidden")
+        })
+    })
+    addBtn.addEventListener("click",function(){
+        console.log("clicked");
+        show.classList.remove("hidden");
+        document.getElementById("add-2").addEventListener("click",()=>{
+            add();
+            show.classList.add("hidden");
+        })
+    })
+    document.getElementById("clos").addEventListener("click",()=>{
+        show.classList.add("hidden");
+    })
+</script>
+</html>
